@@ -51,7 +51,7 @@ def __init__(self):
             算的各种因素,建立相应的数据库进行量化,设计出计算流程规范计算过程,构思智能读图算法核对控制高程.选用Excel作为数据库存储数
             据,采用VB语言结合Excel和CAD编制程序,实现垫石顶高程的智能计算.经过京津城际铁路和京沪高速铁路两条线的验证,结果表明,该程序
             计算速度快,计算结果准确,操作简单,界面友好,把大量技术人员从繁重而重复的任务中解脱出来."],
-  "C_title": ["\r\n                    客运专线桥墩支承垫石顶高程的智能计算\r\n            "],
+  "C_title": ["客运专线桥墩支承垫石顶高程的智能计算"],
   "E_title": ["Intelligent Computing of Bearing Pad Stone Top Elevation in Bridge Piers on Passenger Dedicated Line"],
   "C_author": ["廖立坚"],
   "E_author": ["Liao Lijian"], 
