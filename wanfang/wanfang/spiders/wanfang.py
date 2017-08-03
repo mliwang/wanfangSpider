@@ -8,37 +8,27 @@ class WanfangSpider(scrapy.Spider):
     name = 'wanfang'
     allowed_domains = ["wanfangdata.com.cn"]
     start_urls = [
-        'http://s.wanfangdata.com.cn/Paper.aspx?q=智能计算&f=top&p=1'
+        'http://s.wanfangdata.com.cn/Paper.aspx?q=中医&f=top&p=1'
     ]
-    # 用来保持登录状态，可把chrome上拷贝下来的字符串形式cookie转化成字典形式，粘贴到此处
+    
     cookies = {}
 
-    # 发送给服务器的http头信息，有的网站需要伪装出浏览器头进行爬取，有的则不需要
     headers = {
         # 'Connection': 'keep - alive',
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.82 Safari/537.36'
     }
 
-    # 对请求的返回进行处理的配置
     meta = {
-        'dont_redirect': True,  # 禁止网页重定向
-        'handle_httpstatus_list': [301, 302]  # 对哪些异常返回进行处理
+        'dont_redirect': True,
+        'handle_httpstatus_list': [301, 302]
     }
 
 
     def start_requests(self):
-        """
-        这是一个重载函数，它的作用是发出第一个Request请求
-        :return:
-        """
-        # 带着headers、cookies去请求self.start_urls[0],返回的response会被送到
-        # 回调函数parse中
-        yield Request(self.start_urls[0],
-                             callback=self.parse, headers=self.headers,
-                             cookies=self.cookies, meta=self.meta) 
+        yield Request(self.start_urls[0], callback=self.parse, headers=self.headers, cookies=self.cookies, meta=self.meta) 
 
     def __init__(self):
-        self.key = '智能计算'
+        self.key = '中医'
         self.count = 0
         self.url_1 = 'http://s.wanfangdata.com.cn/Paper.aspx?q='+ self.key +'&f=top&p=' 
 
