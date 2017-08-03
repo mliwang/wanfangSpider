@@ -20,7 +20,7 @@ start_urls = [
 * 2 摘要抓取url 讲self.key 修改为你需要爬取的关键字
 ```
 def __init__(self):
-    self.key = '彙º罃½计签W'
+    self.key = '中医'
     self.count = 0
     self.url_1 = 'http://s.wanfangdata.com.cn/Paper.aspx?q='+ self.key +'&f=top&p='
 ```
