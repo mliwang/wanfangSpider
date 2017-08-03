@@ -22,4 +22,3 @@ class WanfangPipeline(object):
             f.close()
         self.count += 1
         print(self.count,"**"*20)
-#        print(a) 
