@@ -16,7 +16,7 @@ class WanfangPipeline(object):
         if self.count % 10000 == 0:
             print("-------------------"*10)
             self.paper += 1
-        with open("/home/peiwei/wanfang/data1/d" + str(self.paper) + self.name, "a", encoding='utf8' ) as f:
+        with open("../../data1/d" + str(self.paper) + self.name, "a", encoding='utf8' ) as f:
             f.write(a)
             f.write("\n")
             f.close()
