@@ -4,7 +4,7 @@
 # 使用方法
 
   * 1 需要安装scrapy爬虫框架
-  * 2 git改项目
+  * 2 git此项目
   * 3 修改wanfang/wanfang/spiders/wanfang.py 的关键字
   * 4 使用 scrapy crawl wanfang 进行爬取
 # 关键字修改说明
